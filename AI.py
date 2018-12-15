@@ -37,11 +37,11 @@ for i in range(50):
 				oppHP -= dmg
 			else:
 				oppMon[pos] = oppMon[pos] - dmg
-			if(oppMon[pos] <= 0):
-				if(pos < len(oppMon) - 1 ):
-					oppMon = oppMon[0:pos] + oppMon[pos+1:]
-				elif(pos >= len(oppMon) - 1):
-					oppMon = oppMon[0:-1]
+				if(oppMon[pos] <= 0):
+					if(pos < len(oppMon) - 1 ):
+						oppMon = oppMon[0:pos] + oppMon[pos+1:]
+					elif(pos >= len(oppMon) - 1):
+						oppMon = oppMon[0:-1]
 			showField()
 		elif(prompt == 2):
 			dmg = input("Declare board clear damage amount")
