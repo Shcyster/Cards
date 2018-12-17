@@ -6,6 +6,9 @@ oppHP = 1000
 
 def showField():
 	print("HP = " + str(oppHP))
+	if(oppHP <= 0):
+		print("Opponent has lost the game. You win!")
+		quit()
 	if(oppMon == []):
 		print("Opponent's battlefield contains no monsters.")
 	for i in range(len(oppMon)):
